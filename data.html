@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <title>My Songs - Data</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="data.html" class="active">My Songs</a>
+<a href="about.html">About</a>
+</nav>
+
+<main class="data-container">
+<h1>My Song Collection</h1>
+
+<section class="search-bar">
+<input type="text" id="searchInput" placeholder="Search by title, artist or genre...">
+<button type="button" class="button" onclick="loadSongs()">Reset</button>
+</section>
+
+<form class="add-form" id="songForm">
+<h2>Add a Song</h2>
+<input type="text" id="title" placeholder="Title" required>
+<input type="text" id="artist" placeholder="Artist" required>
+
+<select id="genre" required>
+    <option value="" disabled selected>Select Genre</option>
+    <option value="Hip-Hop">Hip-Hop</option>
+    <option value="R&B">R&B</option>
+    <option value="Pop">Pop</option>
+    <option value="Afro-Beat">Afro-Beat</option>
+    <option value="Dance-Pop">Dance-Pop</option>
+</select>
+
+<input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+
+<select id="mood" required>
+    <option value="" disabled selected>Select Mood</option>
+    <option value="Upbeat">Upbeat</option>
+    <option value="Late Night">Late Night</option>
+    <option value="Energetic">Energetic</option>
+    <option value="Mellow">Mellow</option>
+    <option value="Aggressive">Aggressive</option>
+</select>
+
+<button type="submit">Add Song</button>
+</form>
+
+<table id="songTable">
+<thead>
+<tr>
+<th>Title</th><th>Artist</th><th>Genre</th><th>Rating</th><th>Mood</th><th>Action</th>
+</tr>
+</thead>
+<tbody id="songBody"></tbody>
+</table>
+
+<p id="message"></p>
+</main>
+
+<footer><p>&copy; 2026 Andreea Cojocari's Listening Log </p></footer>
+<script src="data.js"></script>
+</body>
+</html>
